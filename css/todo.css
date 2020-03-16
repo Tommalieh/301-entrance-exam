@@ -1,0 +1,105 @@
+
+html{
+    font-family: 'Roboto', sans-serif;
+    background-color: #eeeeee;
+    text-transform: uppercase;
+}
+
+
+header{
+    height: 10vh;
+    background-color: #6d8adbc7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 200%;
+    text-transform: capitalize;
+
+
+}
+
+main{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-areas: 'form list';
+    justify-content: center;
+    margin-top: 7%;
+}
+
+#taskForm{
+    grid-area: form;
+    background-color: #dae4ff;
+    padding: 14% 5% 7% 12%;
+    width: 50%;
+}
+
+input[type=text], input[type=date]{
+    display: block;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 5px 190px 5px 0px;
+    text-align: left;
+    text-transform: capitalize;
+
+}
+
+input[type=text]{
+    padding: 5px 161px 5px 0px;
+    margin-bottom: 50px;
+}
+
+input[type=submit]{
+    background-color: #6d8adbc7;
+    border: none;
+    margin-top: 8%;
+    margin-left: 62%;
+    color: #eee;
+    padding: 2% 4%;
+    font-size: 109%;
+    text-transform: uppercase;
+}
+
+input[type=submit]:hover{
+    cursor: pointer;
+}
+
+ul{
+    grid-area: list;
+    padding: 0 5%;
+
+}
+
+.taskStyle{
+    padding-right: 18%;
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 1%;
+}
+
+.dateStyle{
+    font-size: 12px;
+    margin-bottom: 5%;
+    color: #6d8adbc7;
+}
+
+.spanStyle{
+    color: red;
+}
+
+.spanStyle:hover{
+    cursor: pointer;
+}
+label{
+    font-weight: bold;
+    font-size: 20px;
+}
+legend{
+    text-align: center;
+    padding-left: 0px;
+    width: 84%;
+    position: relative;
+    top: -45px;
+    font-size: 28px;
+    font-weight: bold;
+}
