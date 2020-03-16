@@ -5,7 +5,10 @@
 var container;
 var ulEl;
 var tasksString;
-
+var parentEl;
+var selectedEl;
+var childEl;
+var dateEl;
 var tasks = [];
 function Task(task, date) {
     this.task = task;
@@ -77,3 +80,27 @@ function render() {
 
     }
 }
+
+var removeOnClick = document.getElementsByClassName('spanStyle');
+for (var i = 0; i < removeOnClick.length; i++){
+removeOnClick[i].addEventListener('click', function(){
+    // console.log(event.target.parentElement);
+    parentEl = event.target.parentElement;
+    console.log(parentEl);
+    console.log(parentEl.firstChild);
+    
+    childEl = parentEl.firstChild;
+
+    dateEl = childEl.nextSibling.nextSibling;
+    console.log(dateEl);
+
+    selectedEl = event.target;
+    console.log(selectedEl);
+
+    childEl.remove();
+    dateEl.remove();
+    selectedEl.remove();
+    
+}
+
+)};
